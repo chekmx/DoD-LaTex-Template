@@ -1,4 +1,4 @@
-\documentclass[letterpaper,twocolumn,openany,nodeprecatedcode]{dndbook}
+\documentclass[letterpaper,openany,nodeprecatedcode]{dndbook}
 
 % Use babel or polyglossia to automatically redefine macros for terms
 % Armor Class, Level, etc...
@@ -68,115 +68,136 @@
 
 \chapter{\textbf{\MakeUppercase{Sections}}}
 
-\DndDropCapLine{T}{his package is designed to aid you in} writing beautifully typeset documents for the fifth edition of the world's greatest roleplaying game. It starts by adjusting the section formatting from the defaults in \LaTeX{} to something a bit more familiar to the reader. The chapter formatting is displayed above.
+\begin{multicols}{2}
+  \DndDropCapLine{T}{his package is designed to aid you} in writing beautifully typeset documents for the fifth edition of the world's greatest roleplaying game. It starts by adjusting the section formatting from the defaults in \LaTeX{} to something a bit more familiar to the reader. The chapter formatting is displayed above.
+\end{multicols}
 
-\section{Section}
-Sections break up chapters into large groups of associated text.
+\begin{multicols}{2}
+  [
+      \section{Section}
+  ]
+  Sections break up chapters into large groups of associated text. In sed pretium erat, consectetur iaculis ligula. Aenean ultrices mauris ut magna porttitor, eget accumsan arcu lacinia. Fusce vel ipsum auctor massa ultrices consectetur sed in odio. Vivamus euismod facilisis ipsum, a volutpat nunc fermentum ac. Praesent suscipit libero urna, vel cursus urna aliquam et. Integer elementum nisi nec placerat volutpat. Ut sed ante a quam scelerisque suscipit. Aenean laoreet ex ac neque pharetra consequat. Cras dictum nec justo et egestas.
+  
+  \subsection{Subsection}
+  Subsections further break down the information for the reader.
 
-\subsection{Subsection}
-Subsections further break down the information for the reader.
+  \subsubsection{Subsubsection}
+  Subsubsections are the furthest division of text that still have a block header. Below this level, headers are displayed inline.
 
-\subsubsection{Subsubsection}
-Subsubsections are the furthest division of text that still have a block header. Below this level, headers are displayed inline.
+  \paragraph{Paragraph}
+  The paragraph format is seldom used in the core books, but is available if you prefer it to the ``normal'' style.
 
-\paragraph{Paragraph}
-The paragraph format is seldom used in the core books, but is available if you prefer it to the ``normal'' style.
+  \subparagraph{Subparagraph}
+  The subparagraph format with the paragraph indent is likely going to be more familiar to the reader.
 
-\subparagraph{Subparagraph}
-The subparagraph format with the paragraph indent is likely going to be more familiar to the reader.
+  \section{Special Sections}
+  The module also includes functions to aid in the proper typesetting of multi-line section headers: |\DndFeatHeader| for feats, |\DndItemHeader| magic items and traps, and |\DndSpellHeader| for spells.
 
-\section{Special Sections}
-The module also includes functions to aid in the proper typesetting of multi-line section headers: |\DndFeatHeader| for feats, |\DndItemHeader| magic items and traps, and |\DndSpellHeader| for spells.
-
-\DndFeatHeader{Typesetting Savant}[Prerequisite: \LaTeX{} distribution]
-You have acquired a package which aids in typesetting source material for one of your favorite games, giving you the following benefits:
+  \DndFeatHeader{Typesetting Savant}[Prerequisite: \LaTeX{} distribution]
+  You have acquired a package which aids in typesetting source material for one of your favorite games, giving you the following benefits:
 
 
 
-\DoDHeroicAbilityHeader{Typesetting Savant}{ \LaTeX{} 14}{1}
-You have acquired a package which aids in typesetting source material for one of your favorite games, giving you the following benefits:
+  \DoDHeroicAbilityHeader{Typesetting Savant}{ \LaTeX{} 14}{1}
+  You have acquired a package which aids in typesetting source material for one of your favorite games, giving you the following benefits:
 
-\begin{itemize}
-  \item You have advantage on Intelligence checks to typeset new content.
-  \item When you fail an Intelligence check to typeset new content, you can ask questions online at the package's website.
-\end{itemize}
+  \begin{itemize}
+    \item You have advantage on Intelligence checks to typeset new content.
+    \item When you fail an Intelligence check to typeset new content, you can ask questions online at the package's website.
+  \end{itemize}
 
-\DndItemHeader{Foo's Quill}{Wondrous item, rare}
-This quill has 3 charges. While holding it, you can use an action to expend 1 of its charges. The quill leaps from your hand and writes a contract applicable to your situation.
+  \DndItemHeader{Foo's Quill}{Wondrous item, rare}
+  This quill has 3 charges. While holding it, you can use an action to expend 1 of its charges. The quill leaps from your hand and writes a contract applicable to your situation.
 
-The quill regains 1d3 expended charges daily at dawn.
+  The quill regains 1d3 expended charges daily at dawn.
 
-\DoDSpellHeader%
-    {Beautiful Typesetting}
-    {1}
-    {Any School of Magic}
-    {Word, gesture}
-    {Action}
-    {10 meters}
-    {Instant}
-You are able to transform a written message of any length into a beautiful scroll. All creatures within range that can see the scroll must make a wisdom saving throw or be charmed by you until the spell ends.
+  \DoDSpellHeader%
+      {Beautiful Typesetting}
+      {1}
+      {Any School of Magic}
+      {Word, gesture}
+      {Action}
+      {10 meters}
+      {Instant}
+  You are able to transform a written message of any length into a beautiful scroll. All creatures within range that can see the scroll must make a wisdom saving throw or be charmed by you until the spell ends.
 
-While the creature is charmed by you, they cannot take their eyes off the scroll and cannot willingly move away from the scroll. Also, the targets can make a wisdom saving throw at the end of each of their turns. On a success, they are no longer charmed.
+  While the creature is charmed by you, they cannot take their eyes off the scroll and cannot willingly move away from the scroll. Also, the targets can make a wisdom saving throw at the end of each of their turns. On a success, they are no longer charmed.
 
-\DoDSkillHeader {Skill} {STAT}
+  \DoDSkillHeader {Skill} {STAT}
 Skill description can be place here when using the |DoDSkillHeader|
 
-\section{Map Regions}
-The map region functions |\DndArea| and |\DndSubArea| provide automatic numbering of areas.
+\end{multicols}
 
-\DndArea{Village of Hommlet}
-This is the village of hommlet.
+\chapter{Map Regions}
+\begin{multicols}{2}
+  \DndDropCapLine{T}{he map region functions} |\DndArea| and |\DndSubArea| provide automatic numbering of areas. \lipsum[4]
+\end{multicols}
 
-\DndSubArea{Inn of the Welcome Wench}
-Inside the village is the inn of the Welcome Wench.
+\begin{multicols}{2}
+  \DndArea{Village of Hommlet}
+  This is the village of hommlet.  This 
 
-\DndSubArea{Blacksmith's Forge}
-There's a blacksmith in town, too.
+  \DoDSubArea{Inn of the Welcome Wench}
+  \DoDItalics{This is the read aloud section for this particular sub location}
+  \begin{itemize}
+    \DoDBulletGreen \textcolor{DoDGreen} {Normal room:} GM facing item of interest for the given sublocation
+    \DoDBulletRed \textcolor{red} {Dangerous room:} Danger! Danger! If you want to replicate the adventure modules formatting of having items that highlight traps or monsters use this
+  \end{itemize}
 
-\DndArea{Foo's Castle}
-This is foo's home, a hovel of mud and sticks.
+  \DndSubArea{Blacksmith's Forge}
+  There's a blacksmith in town, too.
 
-\DndSubArea{Moat}
-This ditch has a board spanning it.
+  \DndArea{Foo's Castle}
+  This is foo's home, a hovel of mud and sticks.
 
-\DndSubArea{Entrance}
-A five-foot hole reveals the dirt floor illuminated by a hole in the roof.
+  \DndSubArea{Moat}
+  This ditch has a board spanning it.
+
+  \DndSubArea{Entrance}
+  A five-foot hole reveals the dirt floor illuminated by a hole in the roof.
+\end{multicols}
 
 \chapter{Text Boxes}
 
-The module has three environments for setting text apart so that it is drawn to the reader's attention. |DndReadAloud| is used for text that a game master would read aloud.
+\begin{multicols}{2}
+  \DndDropCapLine{T}he module has three environments for setting text apart so that it is drawn to the reader's attention. |DndReadAloud| is used for text that a game master would read aloud.
+\end{multicols}
 
-\begin{DndReadAloud}
-  As you approach this module you get a sense that the blood and tears of many generations went into its making. A warm feeling welcomes you as you type your first words.
-\end{DndReadAloud}
+\begin{multicols}{2}
+  \begin{DndReadAloud}
+    As you approach this module you get a sense that the blood and tears of many generations went into its making. A warm feeling welcomes you as you type your first words.
+  \end{DndReadAloud}
 
-\section{As an Aside}
-The other two environments are the |DndComment| and the |DndSidebar|. The |DndComment| is breakable and can safely be used inline in the text.
+  \section{As an Aside}
+  The other two environments are the |DndComment| and the |DndSidebar|. The |DndComment| is breakable and can safely be used inline in the text.
 
-\begin{DndComment}{This Is a Comment Box!}
-  A |DndComment| is a box for minimal highlighting of text. It lacks the ornamentation of |DndSidebar|, but it can handle being broken over a column.
-\end{DndComment}
+  \begin{DndComment}{This Is a Comment Box!}
+    A |DndComment| is a box for minimal highlighting of text. It lacks the ornamentation of |DndSidebar|, but it can handle being broken over a column.
+  \end{DndComment}
 
-The |DndSidebar| is not breakable and is best used floated toward a page corner as it is below.
+  The |DndSidebar| is not breakable and is best used floated toward a page corner as it is below.
 
-\begin{DndSidebar}[float=!b]{Behold the DndSidebar!}
-  The |DndSidebar| is used as a sidebar. It does not break over columns and is best used with a figure environment to float it to one corner of the page where the surrounding text can then flow around it.
-\end{DndSidebar}
+  \begin{DndSidebar}[float=!b]{Behold the DndSidebar!}
+    The |DndSidebar| is used as a sidebar. It does not break over columns and is best used with a figure environment to float it to one corner of the page where the surrounding text can then flow around it.
+  \end{DndSidebar}
 
-\section{Tables}
-The |DndTable| colors the even rows and is set to the width of a line by default.
+  \section{Tables}
+  The |DndTable| colors the even rows and is set to the width of a line by default.
 
-\begin{DndTable}[header=Nice Table]{XX}
-    Table head  & Table head \\
-    Some value  & Some value \\
-    Some value  & Some value \\
-    Some value  & Some value
-\end{DndTable}
+  \begin{DndTable}[header=Nice Table]{XX}
+      Table head  & Table head \\
+      Some value  & Some value \\
+      Some value  & Some value \\
+      Some value  & Some value
+  \end{DndTable}
+\end{multicols}
 
 \chapter{Monsters and NPCs}
 
-% Monster stat block
-The |DoDMonster| environment is used to typeset monster stat blocks. The module supplies many functions to easily typeset the contents of the stat block
+\begin{multicols}{2}
+  % Monster stat block
+  \DndDropCapLine{T}he |DoDMonster| environment is used to typeset monster stat blocks. The module supplies many functions to easily typeset the contents of the stat block
+\end{multicols}
 
 % Monster stat block
 \begin{DoDMonster}[float*=t,width=\textwidth + 8pt]{Crypt Ooze}
@@ -207,196 +228,203 @@ The |DoDMonster| environment is used to typeset monster stat blocks. The module 
     \end{DndTable}
 \end{DoDMonster}  
 
-% NPC stat block
-The |DoDNPC| environment is used to typeset monster stat blocks. The module supplies many functions to easily typeset the contents of the stat block
+\begin{multicols}{2}
+  % NPC stat block
+  The |DoDNPC| environment is used to typeset monster stat blocks. The module supplies many functions to easily typeset the contents of the stat block
 
-\begin{DoDNPC}{Npc Foo no abilities}
-  \DoDNPCType{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a eros faucibus, eleifend magna non, dignissim sem. Aenean fermentum semper elit, a sodales tortor fringilla ut. Quisque accumsan turpis leo, vel sollicitudin nisi bibendum id. Maecenas malesuada, augue at pulvinar maximus, lectus tortor finibus lacus, nec convallis enim est eget lorem. Aliquam eleifend dui eu libero ullamcorper vestibulum. Vivamus metus sapien, luctus id ex id, pharetra rutrum ipsum. Ut gravida viverra justo non molestie.}
-  % If you want to use commas in the key values, enclose the values in braces
-  \DoDNPCBasicsTable[
-      movement = {16},
-      dmgBonus = {STR D4},
-      armour = {Studded leather and open helmet (3)},
-      hitpoints = {16},
-      willpoints = 12,
-      skills = {Awareness 14, Brawling 14, Evade 12, Healing 8, Hunting \& Fishing 8},
-      weapons = {
-          \DoDNPCWeapon{Broadsword}{14}{2D6}, 
-          \DoDNPCWeapon{Heavy Crossbow}{12}{2D8}, 
-          large shield}
-  ]
-\end{DoDNPC}
+  \begin{DoDNPC}{Npc Foo no abilities}
+    \DoDNPCType{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a eros faucibus, eleifend magna non, dignissim sem. Aenean fermentum semper elit, a sodales tortor fringilla ut. Quisque accumsan turpis leo, vel sollicitudin nisi bibendum id. Maecenas malesuada, augue at pulvinar maximus, lectus tortor finibus lacus, nec convallis enim est eget lorem. Aliquam eleifend dui eu libero ullamcorper vestibulum. Vivamus metus sapien, luctus id ex id, pharetra rutrum ipsum. Ut gravida viverra justo non molestie.}
+    % If you want to use commas in the key values, enclose the values in braces
+    \DoDNPCBasicsTable[
+        movement = {16},
+        dmgBonus = {STR D4},
+        armour = {Studded leather and open helmet (3)},
+        hitpoints = {16},
+        willpoints = 12,
+        skills = {Awareness 14, Brawling 14, Evade 12, Healing 8, Hunting \& Fishing 8},
+        weapons = {
+            \DoDNPCWeapon{Broadsword}{14}{2D6}, 
+            \DoDNPCWeapon{Heavy Crossbow}{12}{2D8}, 
+            large shield}
+    ]
+  \end{DoDNPC}
 
 
-\begin{DoDNPC}{Npc Foo no abilities}
-  \DoDNPCType{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a eros faucibus, eleifend magna non, dignissim sem. Aenean fermentum semper elit, a sodales tortor fringilla ut. Quisque accumsan turpis leo, vel sollicitudin nisi bibendum id. Maecenas malesuada, augue at pulvinar maximus, lectus tortor finibus lacus, nec convallis enim est eget lorem. Aliquam eleifend dui eu libero ullamcorper vestibulum. Vivamus metus sapien, luctus id ex id, pharetra rutrum ipsum. Ut gravida viverra justo non molestie.}
-  % If you want to use commas in the key values, enclose the values in braces
-  \DoDNPCBasicsTable[
-      movement = {16},
-      dmgBonus = {STR D4},
-      armour = {Studded leather and open helmet (3)},
-      hitpoints = {16},
-      willpoints = 12,
-      skills = {Awareness 14, Brawling 14, Evade 12, Healing 8, Hunting \& Fishing 8},
-      weapons = {
-          \DoDNPCWeapon{Broadsword}{14}{2D6}, 
-          \DoDNPCWeapon{Heavy Crossbow}{12}{2D8}, 
-          large shield}
-  ]
-\end{DoDNPC}
+  \begin{DoDNPC}{Npc Foo no abilities}
+    \DoDNPCType{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a eros faucibus, eleifend magna non, dignissim sem. Aenean fermentum semper elit, a sodales tortor fringilla ut. Quisque accumsan turpis leo, vel sollicitudin nisi bibendum id. Maecenas malesuada, augue at pulvinar maximus, lectus tortor finibus lacus, nec convallis enim est eget lorem. Aliquam eleifend dui eu libero ullamcorper vestibulum. Vivamus metus sapien, luctus id ex id, pharetra rutrum ipsum. Ut gravida viverra justo non molestie.}
+    % If you want to use commas in the key values, enclose the values in braces
+    \DoDNPCBasicsTable[
+        movement = {16},
+        dmgBonus = {STR D4},
+        armour = {Studded leather and open helmet (3)},
+        hitpoints = {16},
+        willpoints = 12,
+        skills = {Awareness 14, Brawling 14, Evade 12, Healing 8, Hunting \& Fishing 8},
+        weapons = {
+            \DoDNPCWeapon{Broadsword}{14}{2D6}, 
+            \DoDNPCWeapon{Heavy Crossbow}{12}{2D8}, 
+            large shield}
+    ]
+  \end{DoDNPC}
 
-Morbi eu tincidunt nisi, quis mollis nisi. Quisque nec dictum nunc. Donec at nisl ipsum. Mauris odio ex, vestibulum et tristique eget, condimentum non neque. Maecenas blandit massa at scelerisque hendrerit. Nunc velit ex, finibus ac dui vitae, tincidunt consequat arcu. Nunc in varius arcu. Aliquam auctor pharetra nisi ac ultrices. Cras blandit leo odio, ac interdum eros iaculis in. Pellentesque lacinia imperdiet orci nec hendrerit. Pellentesque vel tempus elit, id iaculis odio. Sed malesuada vitae turpis ac ullamcorper. In nec egestas nulla. Nullam at justo in eros dictum varius. Proin et ligula sed tellus congue auctor tempus non leo. Etiam tempus nunc in congue sodales.
+  Morbi eu tincidunt nisi, quis mollis nisi. Quisque nec dictum nunc. Donec at nisl ipsum. Mauris odio ex, vestibulum et tristique eget, condimentum non neque. Maecenas blandit massa at scelerisque hendrerit. Nunc velit ex, finibus ac dui vitae, tincidunt consequat arcu. Nunc in varius arcu. Aliquam auctor pharetra nisi ac ultrices. Cras blandit leo odio, ac interdum eros iaculis in. Pellentesque lacinia imperdiet orci nec hendrerit. Pellentesque vel tempus elit, id iaculis odio. Sed malesuada vitae turpis ac ullamcorper. In nec egestas nulla. Nullam at justo in eros dictum varius. Proin et ligula sed tellus congue auctor tempus non leo. Etiam tempus nunc in congue sodales.
 
-\begin{DoDNPC}{Npc Foo no abilities}
-  \DoDNPCType{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a eros faucibus, eleifend magna non, dignissim sem. Aenean fermentum semper elit, a sodales tortor fringilla ut. Quisque accumsan turpis leo, vel sollicitudin nisi bibendum id. Maecenas malesuada, augue at pulvinar maximus, lectus tortor finibus lacus, nec convallis enim est eget lorem. Aliquam eleifend dui eu libero ullamcorper vestibulum. Vivamus metus sapien, luctus id ex id, pharetra rutrum ipsum. Ut gravida viverra justo non molestie.}
-  % If you want to use commas in the key values, enclose the values in braces
-  \DoDNPCBasicsTable[
-      movement = {16},
-      dmgBonus = {STR D4},
-      armour = {Studded leather and open helmet (3)},
-      hitpoints = {16},
-      willpoints = 12,
-      skills = {Awareness 14, Brawling 14, Evade 12, Healing 8, Hunting \& Fishing 8},
-      weapons = {
-          \DoDNPCWeapon{Broadsword}{14}{2D6}, 
-          \DoDNPCWeapon{Heavy Crossbow}{12}{2D8}, 
-          large shield}
-  ]
-\end{DoDNPC}
+  \begin{DoDNPC}{Npc Foo no abilities}
+    \DoDNPCType{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a eros faucibus, eleifend magna non, dignissim sem. Aenean fermentum semper elit, a sodales tortor fringilla ut. Quisque accumsan turpis leo, vel sollicitudin nisi bibendum id. Maecenas malesuada, augue at pulvinar maximus, lectus tortor finibus lacus, nec convallis enim est eget lorem. Aliquam eleifend dui eu libero ullamcorper vestibulum. Vivamus metus sapien, luctus id ex id, pharetra rutrum ipsum. Ut gravida viverra justo non molestie.}
+    % If you want to use commas in the key values, enclose the values in braces
+    \DoDNPCBasicsTable[
+        movement = {16},
+        dmgBonus = {STR D4},
+        armour = {Studded leather and open helmet (3)},
+        hitpoints = {16},
+        willpoints = 12,
+        skills = {Awareness 14, Brawling 14, Evade 12, Healing 8, Hunting \& Fishing 8},
+        weapons = {
+            \DoDNPCWeapon{Broadsword}{14}{2D6}, 
+            \DoDNPCWeapon{Heavy Crossbow}{12}{2D8}, 
+            large shield}
+    ]
+  \end{DoDNPC}
 
-\begin{DoDNPC}[float*=t,width=\textwidth + 8pt]{Npc Foo}
-  \begin{multicols}{2}
-      \DoDNPCType{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a eros faucibus, eleifend magna non, dignissim sem. Aenean fermentum semper elit, a sodales tortor fringilla ut. Quisque accumsan turpis leo, vel sollicitudin nisi bibendum id. Maecenas malesuada, augue at pulvinar maximus, lectus tortor finibus lacus, nec convallis enim est eget lorem. Aliquam eleifend dui eu libero ullamcorper vestibulum. Vivamus metus sapien, luctus id ex id, pharetra rutrum ipsum. Ut gravida viverra justo non molestie.}
-      % If you want to use commas in the key values, enclose the values in braces.
-  \end{multicols}
-  \DoDNPCBasicsWideTable[
-      movement = {16},
-      dmgBonus = {STR D4},
-      armour = {Studded leather and open helmet (3)},
-      hitpoints = {16},
-      willpoints = 12,
-      skills = {Awareness 14, Brawling 14, Evade 12, Healing 8},
-      abilities = {Defensive, Veteran},
-      weapons = {
-          \DoDNPCWeapon{Broadsword}{14}{2D6}, 
-          \DoDNPCWeapon{Heavy Crossbow}{12}{2D8}, 
-          large shield}
-  ]
-\end{DoDNPC}  
+  \begin{DoDNPC}[float*=t,width=\textwidth + 8pt]{Npc Foo}
+    \begin{multicols}{2}
+        \DoDNPCType{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a eros faucibus, eleifend magna non, dignissim sem. Aenean fermentum semper elit, a sodales tortor fringilla ut. Quisque accumsan turpis leo, vel sollicitudin nisi bibendum id. Maecenas malesuada, augue at pulvinar maximus, lectus tortor finibus lacus, nec convallis enim est eget lorem. Aliquam eleifend dui eu libero ullamcorper vestibulum. Vivamus metus sapien, luctus id ex id, pharetra rutrum ipsum. Ut gravida viverra justo non molestie.}
+        % If you want to use commas in the key values, enclose the values in braces.
+    \end{multicols}
+    \DoDNPCBasicsWideTable[
+        movement = {16},
+        dmgBonus = {STR D4},
+        armour = {Studded leather and open helmet (3)},
+        hitpoints = {16},
+        willpoints = 12,
+        skills = {Awareness 14, Brawling 14, Evade 12, Healing 8},
+        abilities = {Defensive, Veteran},
+        weapons = {
+            \DoDNPCWeapon{Broadsword}{14}{2D6}, 
+            \DoDNPCWeapon{Heavy Crossbow}{12}{2D8}, 
+            large shield}
+    ]
+  \end{DoDNPC}  
 
-\subsubsection*{Black Powder Weapons}
-All weapons use exploding dice for damage and have the following features,  Piercing, Load, 
+  \pagebreak
+  \subsubsection*{Black Powder Weapons}
+  All weapons use exploding dice for damage and have the following features,  Piercing, Load, 
 
-\rowcolors {1} {} {PhbTan}
-\begin{table*}[b]
-  \caption{\DndFontTableTitle{}Black Powder Weapons}\label{tab:colors}
-  \begin{tabularx}{\linewidth}{llllXcXXXX}
-    \textbf{Weapon} & \textbf{Grip} & \textbf{STR} & \textbf{Range} & \textbf{Damage} & \textbf{Durability} & \textbf{Cost} & \textbf{Supply} & \textbf{Features} & \textbf{Melee}\\
-    Pistol & 1H & 7 & 20 & 3d4& 6 & 300 & Rare & Load & Small Club \\
-    Carbine & 2H & 7 & 30 & 4d4& 7 & 500 & Rare & Load & Staff Spear \\
-    Musket & 3H & 7 & 40 & 4d4& 9 & 500 & Rare & Load & Staff Spear \\
-    Dragon & 1H & 7 & 15 & 3/2/1d6& 6 & 500 & Rare & Load, shot & Small Club \\
-    Donerbuss & 2H & 7 & 20 & 4/3/2/1d6& 7 & 300 & Rare & Load, shot & Large Club \\
-    Grenado & 1H & 9 & STR & 5d4& - & 50 & Rare & Explosive & - \\
-  \end{tabularx}
-\end{table*}
+  \rowcolors {1} {} {PhbTan}
+  \begin{table*}[b]
+    \caption{\DndFontTableTitle{}Black Powder Weapons}\label{tab:colors}
+    \begin{tabularx}{\linewidth}{llllXcXXXX}
+      \textbf{Weapon} & \textbf{Grip} & \textbf{STR} & \textbf{Range} & \textbf{Damage} & \textbf{Durability} & \textbf{Cost} & \textbf{Supply} & \textbf{Features} & \textbf{Melee}\\
+      Pistol & 1H & 7 & 20 & 3d4& 6 & 300 & Rare & Load & Small Club \\
+      Carbine & 2H & 7 & 30 & 4d4& 7 & 500 & Rare & Load & Staff Spear \\
+      Musket & 3H & 7 & 40 & 4d4& 9 & 500 & Rare & Load & Staff Spear \\
+      Dragon & 1H & 7 & 15 & 3/2/1d6& 6 & 500 & Rare & Load, shot & Small Club \\
+      Donerbuss & 2H & 7 & 20 & 4/3/2/1d6& 7 & 300 & Rare & Load, shot & Large Club \\
+      Grenado & 1H & 9 & STR & 5d4& - & 50 & Rare & Explosive & - \\
+    \end{tabularx}
+  \end{table*}
+\end{multicols}
 
 \part{Customization}
 
 \chapter{Colors}
+\begin{multicols}{2}
+  [
+    \begin{multicols}{2}
+      This package provides several global color variables to style |DndComment|, |DndReadAloud|, |DndSidebar|, and |DndTable| environments.
+    \end{multicols}
+  ]
+  \begin{table*}[b]
+    \caption{\DndFontTableTitle{}Colors Supported by this Package}\label{tab:colors}
 
-\begin{table*}[b]
-  \caption{\DndFontTableTitle{}Colors Supported by this Package}\label{tab:colors}
+    \begin{tabularx}{\linewidth}{lX}
+      \textbf{Color}                  & \textbf{Description} \\
+      \rowcolor{PhbLightGreen}
+      |PhbLightGreen|                 & Light green used in PHB Part 1 (Default) \\
+      \rowcolor{PhbLightCyan}
+      |PhbLightCyan|                  & Light cyan used in PHB Part 2 \\
+      \rowcolor{PhbMauve}
+      |PhbMauve|                      & Pale purple used in PHB Part 3 \\
+      \rowcolor{PhbTan}
+      |PhbTan|                        & Light brown used in PHB appendix \\
+      \rowcolor{DmgLavender}
+      |DmgLavender|                   & Pale purple used in DMG Part 1 \\
+      \rowcolor{DmgCoral}
+      |DmgCoral|                      & Orange-pink used in DMG Part 2 \\
+      \rowcolor{DmgSlateGray}
+      |DmgSlateGray| (|DmgSlateGrey|) & Blue-gray used in PHB Part 3 \\
+      \rowcolor{DmgLilac}
+      |DmgLilac|                      & Purple-gray used in DMG appendix \\
+      \rowcolor{BrGreen}
+      |BrGreen|                       & Gray-green used for tables in Basic Rules\\
+    \end{tabularx}
+  \end{table*}
+  
+  \begin{DndTable}[header=Box Colors]{lX}
+    Color            &  Description \\
+    |commentcolor|   & |DndComment| background \\
+    |readaloudcolor| & |DndReadAloud| background \\
+    |sidebarcolor|   & |DndSidebar| background \\
+    |tablecolor|     & background of even |DndTable| rows \\
+  \end{DndTable}
 
-  \begin{tabularx}{\linewidth}{lX}
-    \textbf{Color}                  & \textbf{Description} \\
-    \rowcolor{PhbLightGreen}
-    |PhbLightGreen|                 & Light green used in PHB Part 1 (Default) \\
-    \rowcolor{PhbLightCyan}
-    |PhbLightCyan|                  & Light cyan used in PHB Part 2 \\
-    \rowcolor{PhbMauve}
-    |PhbMauve|                      & Pale purple used in PHB Part 3 \\
-    \rowcolor{PhbTan}
-    |PhbTan|                        & Light brown used in PHB appendix \\
-    \rowcolor{DmgLavender}
-    |DmgLavender|                   & Pale purple used in DMG Part 1 \\
-    \rowcolor{DmgCoral}
-    |DmgCoral|                      & Orange-pink used in DMG Part 2 \\
-    \rowcolor{DmgSlateGray}
-    |DmgSlateGray| (|DmgSlateGrey|) & Blue-gray used in PHB Part 3 \\
-    \rowcolor{DmgLilac}
-    |DmgLilac|                      & Purple-gray used in DMG appendix \\
-    \rowcolor{BrGreen}
-    |BrGreen|                       & Gray-green used for tables in Basic Rules\\
-  \end{tabularx}
-\end{table*}
+  They also accept an optional color argument to set the color for a single instance. See Table~\ref{tab:colors} for a list of core book accent colors.
 
-This package provides several global color variables to style |DndComment|, |DndReadAloud|, |DndSidebar|, and |DndTable| environments.
+  \begin{lstlisting}
+  \begin{DndTable}[color=PhbLightCyan]{cX}
+    d8 & Item \\
+    1  & Small wooden button \\
+    2  & Red feather \\
+    3  & Human tooth \\
+    4  & Vial of green liquid\\
+    5  & Loaded dice \\
+    6  & Tasty biscuit \\
+    7  & Broken axe handle \\
+    8  & Tarnished silver locket \\
+  \end{DndTable}
+  \end{lstlisting}
 
-\begin{DndTable}[header=Box Colors]{lX}
-  Color            &  Description \\
-  |commentcolor|   & |DndComment| background \\
-  |readaloudcolor| & |DndReadAloud| background \\
-  |sidebarcolor|   & |DndSidebar| background \\
-  |tablecolor|     & background of even |DndTable| rows \\
-\end{DndTable}
-
-They also accept an optional color argument to set the color for a single instance. See Table~\ref{tab:colors} for a list of core book accent colors.
-
-\begin{lstlisting}
-\begin{DndTable}[color=PhbLightCyan]{cX}
-  d8 & Item \\
-  1  & Small wooden button \\
-  2  & Red feather \\
-  3  & Human tooth \\
-  4  & Vial of green liquid\\
-  5  & Loaded dice \\
-  6  & Tasty biscuit \\
-  7  & Broken axe handle \\
-  8  & Tarnished silver locket \\
-\end{DndTable}
-\end{lstlisting}
-
-\begin{DndTable}[color=PhbLightCyan]{cX}
-  d8 & Item \\
-  1  & Small wooden button\\
-  2  & Red feather \\
-  3  & Human tooth \\
-  4  & Vial of green liquid \\
-  5  & Loaded dice \\
-  6  & Tasty biscuit \\
-  7  & Broken axe handle \\
-  8  & Tarnished silver locket \\
-\end{DndTable}
+  \begin{DndTable}[color=PhbLightCyan]{cX}
+    d8 & Item \\
+    1  & Small wooden button\\
+    2  & Red feather \\
+    3  & Human tooth \\
+    4  & Vial of green liquid \\
+    5  & Loaded dice \\
+    6  & Tasty biscuit \\
+    7  & Broken axe handle \\
+    8  & Tarnished silver locket \\
+  \end{DndTable}
 
 
-\section{Themed Colors}
-Use |\DndSetThemeColor[<color>]| to set |commentcolor|, |readaloudcolor|, |sidebarcolor|, and |tablecolor| to a specific color. Calling |\DndSetThemeColor| without an argument sets those colors to the current |themecolor|. In the following example the group limits the change to just a few boxes; after the group finishes, the colors are reverted to what they were before the group started.
+  \section{Themed Colors}
+  Use |\DndSetThemeColor[<color>]| to set |commentcolor|, |readaloudcolor|, |sidebarcolor|, and |tablecolor| to a specific color. Calling |\DndSetThemeColor| without an argument sets those colors to the current |themecolor|. In the following example the group limits the change to just a few boxes; after the group finishes, the colors are reverted to what they were before the group started.
 
-\begin{lstlisting}
-\begingroup
-\DndSetThemeColor[PhbMauve]
+  \begin{lstlisting}
+    \begingroup
+      \DndSetThemeColor[PhbMauve]
 
-\begin{DndComment}{This Comment Is in Mauve}
-  This comment is in the the new color.
-\end{DndComment}
+      \begin{DndComment}{This Comment Is in Mauve}
+        This comment is in the the new color.
+      \end{DndComment}
 
-\begin{DndSidebar}{This Sidebar Is Also Mauve}
-  The sidebar is also using the new theme color.
-\end{DndSidebar}
-\endgroup
-\end{lstlisting}
+      \begin{DndSidebar}{This Sidebar Is Also Mauve}
+        The sidebar is also using the new theme color.
+      \end{DndSidebar}
+    \endgroup
+  \end{lstlisting}
 
-\begingroup
-\DndSetThemeColor[PhbMauve]
+  \begingroup
+    \DndSetThemeColor[PhbMauve]
 
-\begin{DndComment}{This Comment Is in Mauve}
-  This comment is in the the new color.
-\end{DndComment}
+    \begin{DndComment}{This Comment Is in Mauve}
+      This comment is in the the new color.
+    \end{DndComment}
 
-\begin{DndSidebar}{This Sidebar Is Also Mauve}
-  The sidebar is also using the new theme color.
-\end{DndSidebar}
-\endgroup
+    \begin{DndSidebar}{This Sidebar Is Also Mauve}
+      The sidebar is also using the new theme color.
+    \end{DndSidebar}
+  \endgroup
 
+  \end{multicols}
 \end{document}

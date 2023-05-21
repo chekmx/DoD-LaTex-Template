@@ -1,6 +1,7 @@
 \ExplSyntaxOn
 
 \newcommand{\DoDBulletGreen}{\item[\color{DoDGreen}\ding{70}]} 
+\newcommand{\DoDBulletRed}{\item[\color{red}\ding{70}]} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Special command for magic items, traps, and the like.
@@ -41,3 +42,29 @@
   {
     \subsubsection {#1~(\small #2)}
   }
+
+  \NewDocumentCommand {\DoDSubArea} {m}
+  {
+    \refstepcounter {DndSubAreaCounter}
+    \label { \l__dnd_region_tl \l__dnd_sub_area_label_tl : #1 }
+
+    \tl_set:Nn \l_tmpa_tl { \l__dnd_region_tl \arabic {DndAreaCounter} \alph {DndSubAreaCounter} . ~ #1 }
+
+    \str_case_e:nn {\l__dnd_area_num_depth_tl}
+      {
+        {1} { \subsection    {\l_tmpa_tl} }
+        {2} { \subsubsection {\l_tmpa_tl} }
+        {3} { \paragraph     {\l_tmpa_tl} }
+        {4} { \subparagraph  {\l_tmpa_tl} }
+      }
+
+  }
+
+  \NewDocumentCommand {\DoDItalics} {m}
+  {
+    \begin {par}
+      \setlength{\parindent}{30pt}
+      \textit {#1}
+    \end {par}
+  }
+
