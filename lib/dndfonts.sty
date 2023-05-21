@@ -165,7 +165,7 @@
     toc-section-family .initial:n        = \headerfont,
     toc-section-family .value_required:n = true,
     toc-section-style .tl_set:N         = \l__dnd_toc_section_style_tl,
-    toc-section-style .initial:n        = \normalsize,
+    toc-section-style .initial:n        = \bfseries \normalsize,
     toc-section-style .value_required:n = true,
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Stat blocks
@@ -189,7 +189,7 @@
     stat-block-section-family .initial:n        = \sffamily,
     stat-block-section-family .value_required:n = true,
     stat-block-section-style .tl_set:N         = \l__dnd_stat_block_section_style_tl,
-    stat-block-section-style .initial:n        = \color{titlered} \scshape \large,
+    stat-block-section-style .initial:n        = \color{DoDGreen} \scshape \large,
     stat-block-section-style .value_required:n = true,
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Miscellaneous
@@ -199,14 +199,14 @@
     footer-family .initial:n        = \normalfont,
     footer-family .value_required:n = true,
     footer-style .tl_set:N         = \l__dnd_footer_style_tl,
-    footer-style .initial:n        = \scriptsize \textcolor{pagegold},
+    footer-style .initial:n        = \scriptsize \textcolor{DoDGreen},
     footer-style .value_required:n = true,
     % Page number
     page-number-family .tl_set:N         = \l__dnd_page_number_family_tl,
     page-number-family .initial:n        = \normalfont,
     page-number-family .value_required:n = true,
     page-number-style .tl_set:N         = \l__dnd_page_number_style_tl,
-    page-number-style .initial:n        = \scriptsize \textcolor{pagegold},
+    page-number-style .initial:n        = \scriptsize \textcolor{DoDGreen},
     page-number-style .value_required:n = true,
     % Drop caps
     drop-cap-family .tl_set:N         = \l__dnd_drop_cap_family_tl,
@@ -308,7 +308,7 @@
 % Drop Caps
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\LettrineFontHook}
-  { \l__dnd_drop_cap_family_tl \l__dnd_drop_cap_style_tl }
+  { \color{DoDGreen} \l__dnd_drop_cap_family_tl \l__dnd_drop_cap_style_tl }
 
 % Usage: DndDropCapLine[<lettrine options>]{<first letter>}{<small caps line>}
 %    It takes trial and error to get the 2nd argument to align with
